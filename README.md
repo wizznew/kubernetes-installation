@@ -136,7 +136,7 @@ $ sudo swapoff -a
   
   Add entries to your /etc/hosts covering IP and hostname of your nodes
   ```
-  $ echo "202.22.13.11          masternode          master               node1           master.kubelocal"| sudo tee -a /etc/hosts
+  $ echo "202.22.13.11          masternode          master               node1           kubemaster1.kubelocal"| sudo tee -a /etc/hosts
   $ echo "202.22.13.11          slavenode           slave                node2           slave.kubelocal"| sudo tee -a /etc/hosts
   $ echo "202.22.13.11          workera             worker1              node3           worker1.kubelocal"| sudo tee -a /etc/hosts
   $ echo "202.22.13.11          workerb             worker2              node4           worker2.kubelocal"| sudo tee -a /etc/hosts
@@ -223,7 +223,13 @@ Follow steps descibed in **ON WORKER NODES ONLY** to join worker nodes to the cl
 #### 7. Check and Verify Nodes
 Check your nodes availability by issuing below command
 ```
-$ kubectl get nodes
+$ $ kubectl get nodes -o wide
+NAME                    STATUS   ROLES    AGE   VERSION   INTERNAL-IP    EXTERNAL-IP   OS-IMAGE                KERNEL-VERSION                CONTAINER-RUNTIME
+kubemaster1.kubelocal   Ready    master   15h   v1.19.3   202.22.13.11   <none>        CentOS Linux 7 (Core)   3.10.0-1127.19.1.el7.x86_64   docker://19.3.13
+worker1.kubelocal       Ready    <none>   13h   v1.19.3   202.22.13.13   <none>        CentOS Linux 7 (Core)   3.10.0-1127.19.1.el7.x86_64   docker://19.3.13
+worker2.kubelocal       Ready    <none>   13h   v1.19.3   202.22.13.14   <none>        CentOS Linux 7 (Core)   3.10.0-1127.19.1.el7.x86_64   docker://19.3.13
+worker3.kubelocal       Ready    <none>   13h   v1.19.3   202.22.13.15   <none>        CentOS Linux 7 (Core)   3.10.0-1127.19.1.el7.x86_64   docker://19.3.13
+
 ```
 The status **NotReady** may shown a bit longer when you issue some actions.
 
