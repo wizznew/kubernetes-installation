@@ -19,3 +19,6 @@ below only sample of join command
 ```
 $ sudo kubeadm join 202.22.13.11:6443 --token nu06lu.xrsux0ss0ixtnms5  \ --discovery-token-ca-cert-hash ha256:f996ea35r4353d342fdea2997a1cf8caeddafd6d4360d606dbc82314683478hjmf7
 ```
+
+#### 3. Check and Verify
+Continue to step #7 on [**02-On Master Node**](https://github.com/wizznew/kubernetes-installation/blob/main/02-On%20Master%20Node.md)
