@@ -58,12 +58,12 @@ $ sudo su
 # exit
 ```
 #### 6. Setup Worker Nodes
-Follow steps descibed in **ON WORKER NODES ONLY** to join worker nodes to the cluster
+Follow steps descibed in [**3-On Worker Nodes**](https://github.com/wizznew/kubernetes-installation/blob/main/03-On%20Worker%20Nodes.md) to join worker nodes to the cluster
 
 #### 7. Check and Verify Nodes
 Check your nodes availability by issuing below command
 ```
-$ $ kubectl get nodes -o wide
+$ kubectl get nodes -o wide
 NAME                    STATUS   ROLES    AGE   VERSION   INTERNAL-IP    EXTERNAL-IP   OS-IMAGE                KERNEL-VERSION                CONTAINER-RUNTIME
 kubemaster1.kubelocal   Ready    master   15h   v1.19.3   202.22.13.11   <none>        CentOS Linux 7 (Core)   3.10.0-1127.19.1.el7.x86_64   docker://19.3.13
 worker1.kubelocal       Ready    <none>   13h   v1.19.3   202.22.13.13   <none>        CentOS Linux 7 (Core)   3.10.0-1127.19.1.el7.x86_64   docker://19.3.13
