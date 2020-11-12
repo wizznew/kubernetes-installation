@@ -58,7 +58,7 @@ $ sudo su
 # exit
 ```
 #### 6. Setup Worker Nodes
-Follow steps descibed in [**3-On Worker Nodes**](https://github.com/wizznew/kubernetes-installation/blob/main/03-On%20Worker%20Nodes.md) to join worker nodes to the cluster
+Follow steps descibed in [**03-On Worker Nodes**](https://github.com/wizznew/kubernetes-installation/blob/main/03-On%20Worker%20Nodes.md) to join worker nodes to the cluster
 
 #### 7. Check and Verify Nodes
 Check your nodes availability by issuing below command
