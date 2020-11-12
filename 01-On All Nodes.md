@@ -134,5 +134,6 @@ $ sudo shutdown -r now
 #### 10. Notes
 
 You may consider to clone the VM in this step.
+
 Then you may continue to next step [**02-On Master Node**](https://github.com/wizznew/kubernetes-installation/blob/main/02-On%20Master%20Node.md)
 
