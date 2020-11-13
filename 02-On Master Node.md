@@ -29,7 +29,7 @@ The `--pod-network-cidr` is a mandatory when you are choosing networking pod oth
 $ sudo kubeadm init --apiserver-advertise-address [IP-ADDRESS-OF-MASTER-NODE] --pod-network-cidr [IP-ADDRESS-OF-POD-NETWORK]
 ```
 
-If you were not sure and choose for automatic creation of kubernetes cluster just run `sudo kubeadm init`, will use a weave network within next step.
+If you were not sure and choose for automatic creation of kubernetes cluster just run **`sudo kubeadm init`** or if you are going to use flannel network pod, you may run **`sudo kubeadm init --pod-network-cidr=10.244.0.0/16`**
 
 > Note: 
 >
