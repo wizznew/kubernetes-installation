@@ -1,3 +1,7 @@
+Before continuing, you might need to change the hostname of master node
+```
+$ sudo hostnamectl set-hostname kubeworker1.kubelocal
+```
 #### 1. Open Network Ports
 ```
 $ sudo firewall-cmd --permanent --add-port=10251/tcp
