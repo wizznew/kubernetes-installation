@@ -115,10 +115,10 @@ $ sudo swapoff -a
   Add entries to your /etc/hosts covering IP and hostname of your nodes
   ```
   $ echo "202.22.13.11          masternode          master               node1           kubemaster1.kubelocal"| sudo tee -a /etc/hosts
-  $ echo "202.22.13.11          slavenode           slave                node2           slave.kubelocal"| sudo tee -a /etc/hosts
-  $ echo "202.22.13.11          workera             worker1              node3           worker1.kubelocal"| sudo tee -a /etc/hosts
-  $ echo "202.22.13.11          workerb             worker2              node4           worker2.kubelocal"| sudo tee -a /etc/hosts
-  $ echo "202.22.13.11          workerc             worker3              node5           worker3.kubelocal"| sudo tee -a /etc/hosts
+  $ echo "202.22.13.12          slavenode           slave                node2           slave.kubelocal"| sudo tee -a /etc/hosts
+  $ echo "202.22.13.13          workera             worker1              node3           worker1.kubelocal"| sudo tee -a /etc/hosts
+  $ echo "202.22.13.14          workerb             worker2              node4           worker2.kubelocal"| sudo tee -a /etc/hosts
+  $ echo "202.22.13.15          workerc             worker3              node5           worker3.kubelocal"| sudo tee -a /etc/hosts
   ```
   Changing hostname will be covered in setting up master node and worker nodes
   
@@ -131,9 +131,12 @@ $ sudo systemctl start docker
 $ sudo systemctl start kubelet
 $ sudo shutdown -r now
 ```
+
 #### 10. Notes
 
-You may consider to clone the VM in this step.
+* You may find kubelet service dead or terminated, however you may continue to next step
+* You may consider to clone the VM in this step.
+
 
 Then you may continue to next step [**02-On Master Node**](https://github.com/wizznew/kubernetes-installation/blob/main/02-On%20Master%20Node.md)
 
