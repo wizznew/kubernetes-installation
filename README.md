@@ -6,20 +6,11 @@ This will guide you to setup minimal kubernetes for learning
 You can download from VM Image from [HERE](https://bit.ly/Centos7VM-Kubernetes-Image)
 
 
-#### Virtual Machine Requirement
+#### Virtual Machine Specifications
 | Type | Specs| Note
 | --- | --- | ---
-| Control Plane (Master) - 1 VM | 2 CPU|
-| |2 GB Memory|
-| | 40 GB Storage|
-| | Network 1| Offline
-| | Network 2| Bridged to Ethernet (internet connectivity required for packages installation)
-|   |   |  
-| Worker Nodes - 2 VMs| 2 CPU|
-| |2 GB Memory|
-| | 40 GB Storage|
-| | Network 1| Offline
-| | Network 2| Bridged to Ethernet (internet connectivity required for packages installation)
+| Control Plane (Master) - 1 VM | <ul> <li>2 CPU</li> <li>2 GB Memory</li> <li>100 GB Storage</li> <li>2 Networks</li></ul>|<b>Network 1</b> mode is <b>offline</b><br><br><b>Network 2</b> mode is <b>Bridged</b><br>Internet connectivity is required on Network 2,<br>in order to install required software packages
+| Worker Nodes - 2 VMs |  <ul> <li>2 CPU</li> <li>2 GB Memory</li> <li>100 GB Storage</li> <li>2 Networks</li></ul>|<b>Network 1</b> is <b>offline</b><br><br><b>Network 2</b> mode is <b>Bridged</b><br>Internet connectivity is required on Network 2,<br>in order to install required software packages
 
 
 Above requirements are to give some space for application containers (microservices) to run
