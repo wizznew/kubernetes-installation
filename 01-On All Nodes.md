@@ -114,11 +114,11 @@ $ sudo swapoff -a
   
   Add entries to your /etc/hosts covering IP and hostname of your nodes
   ```
-  $ echo "202.22.13.11          masternode          master               node1           kubemaster1.kubelocal"| sudo tee -a /etc/hosts
-  $ echo "202.22.13.12          slavenode           slave                node2           slave.kubelocal"| sudo tee -a /etc/hosts
-  $ echo "202.22.13.13          workera             worker1              node3           worker1.kubelocal"| sudo tee -a /etc/hosts
-  $ echo "202.22.13.14          workerb             worker2              node4           worker2.kubelocal"| sudo tee -a /etc/hosts
-  $ echo "202.22.13.15          workerc             worker3              node5           worker3.kubelocal"| sudo tee -a /etc/hosts
+  $ echo "192.168.0.11          masternode          master               node1           kubemaster1.kubelocal"| sudo tee -a /etc/hosts
+  $ echo "192.168.0.12          slavenode           slave                node2           kubemaster2.kubelocal"| sudo tee -a /etc/hosts
+  $ echo "192.168.0.13          workera             worker1              node3           kubeworker1.kubelocal"| sudo tee -a /etc/hosts
+  $ echo "192.168.0.14          workerb             worker2              node4           kubeworker2.kubelocal"| sudo tee -a /etc/hosts
+  $ echo "192.168.0.15          workerc             worker3              node5           kubeworker3.kubelocal"| sudo tee -a /etc/hosts
   ```
   Changing hostname will be covered in setting up master node and worker nodes
   
