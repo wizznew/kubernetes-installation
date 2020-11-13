@@ -57,6 +57,23 @@ $ sudo su
 # kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
 # exit
 ```
+
+**flannel** networking pod
+```
+$ kubectl apply -f https://github.com/coreos/flannel/raw/master/Documentation/kube-flannel.yml
+```
+
+You may check status of master node right after you apply networking pod.
+
+The status will becomes **Ready** after few minutes
+
+```
+$ kubectl get node -o wide
+
+NAME                    STATUS   ROLES    AGE   VERSION   INTERNAL-IP    EXTERNAL-IP   OS-IMAGE                KERNEL-VERSION               CONTAINER-RUNTIME
+kubemaster1.kubelocal   Ready    master   13m   v1.19.4   192.168.0.11   <none>        CentOS Linux 7 (Core)   3.10.0-1160.2.2.el7.x86_64   docker://19.3.13
+
+```
 #### 6. Setup Worker Nodes
 Follow steps descibed in [**03-On Worker Nodes**](https://github.com/wizznew/kubernetes-installation/blob/main/03-On%20Worker%20Nodes.md) to join worker nodes to the cluster
 
