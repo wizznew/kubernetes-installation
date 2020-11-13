@@ -1,3 +1,8 @@
+Before continuing, you might need to change the hostname of master node
+```
+$ sudo hostnamectl set-hostname kubemaster1.kubelocal
+```
+
 #### 1. Open Network Ports
 ```
 $ sudo firewall-cmd --permanent --add-port=6443/tcp
@@ -81,11 +86,9 @@ Follow steps descibed in [**03-On Worker Nodes**](https://github.com/wizznew/kub
 Check your nodes availability by issuing below command
 ```
 $ kubectl get nodes -o wide
-NAME                    STATUS   ROLES    AGE   VERSION   INTERNAL-IP    EXTERNAL-IP   OS-IMAGE                KERNEL-VERSION                CONTAINER-RUNTIME
-kubemaster1.kubelocal   Ready    master   15h   v1.19.3   202.22.13.11   <none>        CentOS Linux 7 (Core)   3.10.0-1127.19.1.el7.x86_64   docker://19.3.13
-worker1.kubelocal       Ready    <none>   13h   v1.19.3   202.22.13.13   <none>        CentOS Linux 7 (Core)   3.10.0-1127.19.1.el7.x86_64   docker://19.3.13
-worker2.kubelocal       Ready    <none>   13h   v1.19.3   202.22.13.14   <none>        CentOS Linux 7 (Core)   3.10.0-1127.19.1.el7.x86_64   docker://19.3.13
-worker3.kubelocal       Ready    <none>   13h   v1.19.3   202.22.13.15   <none>        CentOS Linux 7 (Core)   3.10.0-1127.19.1.el7.x86_64   docker://19.3.13
-
+NAME                    STATUS   ROLES    AGE     VERSION   INTERNAL-IP    EXTERNAL-IP   OS-IMAGE                KERNEL-VERSION               CONTAINER-RUNTIME
+kubemaster1.kubelocal   Ready    master   3h18m   v1.19.4   192.168.0.11   <none>        CentOS Linux 7 (Core)   3.10.0-1160.2.2.el7.x86_64   docker://19.3.13
+kubeworker1.kubelocal   Ready    <none>   151m    v1.19.4   192.168.0.13   <none>        CentOS Linux 7 (Core)   3.10.0-1160.2.2.el7.x86_64   docker://19.3.13
+kubeworker3.kubelocal   Ready    <none>   151m    v1.19.4   192.168.0.15   <none>        CentOS Linux 7 (Core)   3.10.0-1160.2.2.el7.x86_64   docker://19.3.13
 ```
 The status **NotReady** may shown a bit longer when you issue some actions.
